@@ -1,0 +1,77 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2> Razor controller Index</h2>
+
+
+<!-- Inline expression statement -->
+
+<p>Today Date and Time : @DateTime.Now</p>
+
+<p>This year is : @DateTime.Now.Year</p>
+
+
+
+<!-- Declaring variable -->
+@{
+    string name = "Shubhangi Gunjal";
+    var TodaysTime = DateTime.Now.ToLongTimeString();     //we can store any datatype data with var keyword
+}
+
+<h3>My name is: @name</h3>
+<h3>Todays time is: @TodaysTime</h3>
+
+
+<!--  Conditional statements -->
+@{
+    int marks = 80;
+    if (marks >= 80)
+    {
+        <h3>Your Grade is A-1</h3>
+    }
+    else
+    {
+        <h3>Your Grade is A</h3>
+    }
+}
+
+@{
+    string fruit = "apple";
+    switch (fruit)
+    {
+        case "banana":
+            <h2>You have selected Banana</h2>
+            break;
+
+        case "Pineapple":
+            <h2>You have selected Pineapple</h2>
+            break;
+
+        case "apple":
+            <h2>You have selected Apple</h2>
+            break;
+
+        default:
+            <h2>Invalid fruit</h2>
+            break;
+    }
+}
+
+@{ 
+    for (int i = 1; i < 10; i++)
+    {
+        <h2>@i</h2>
+    }
+}
+
+@{ 
+    string[] sports = { "Football", "Hocky", "Baseball" };
+
+    foreach (string i in sports)
+    {
+        <h2>@i</h2>
+    }
+}
+
