@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@*
+    1.Both ViewBag and ViewData are used to pass data from controller to view.
+    2.Both ViewBag and ViewData are DataDictionary objects.
+    3.In both we can not transer data from one action method to another action method's view.
+    3.Both ViewBag and ViewData are does not provide compile time error checking (compile means code written time).
+*@
+
+<h2>@ViewData["Message1"]</h2>
+<h2>@ViewBag.Message2</h2>
+
+<h2> @ViewData["CurrentTime1"]</h2>
+<h2>@ViewBag.CurrentTime2</h2>
+
+<ul>
+    @{
+        foreach (var i in (string[])ViewData["FruitsArray1"])
+        {
+            <li>@i</li>
+        }
+    }
+</ul>
+
+@*In viewbag their is no need for typecasting*@
+
+<ul>
+    @{
+        foreach (var i in ViewBag.FruitsArray2)
+        {
+            <li>@i</li>
+        }
+    }
+</ul>
+
