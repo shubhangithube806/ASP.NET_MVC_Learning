@@ -1,0 +1,49 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+@*1.ViewBag does not required typecasting ,it auto generate type casting
+   2.Syntax is ViewBag.<PropertyName> = <Value>;
+    3.ViewData and ViewBag can access each other data interchangeably
+ *@
+
+<h2>This is ViewBag Index View.</h2>
+
+<h3>@ViewBag.Message</h3>
+<h3>@ViewBag.CurrentDate</h3>
+
+<ul>
+    @{
+        foreach (var i in ViewBag.fruitsArray)
+        {
+            <li>@i</li>
+        }
+    }
+</ul>
+
+
+<ul>
+    @{
+        foreach (var i in ViewBag.SportsList)
+        {
+            <li>@i</li>
+        }
+    }
+</ul>
+
+@{ 
+    var a = ViewBag.StudentInfo;
+}
+
+<p>@a.StdId</p>
+<p>@a.StdName</p>
+<p>@a.StdDesignation</p>
+
+
+<h2>Data comes from ViewData: @ViewData["CommonMessage"];</h2>
+<h2>Data comes from ViewBag: @ViewBag.CommonMessage;</h2>
+
+
+
+
