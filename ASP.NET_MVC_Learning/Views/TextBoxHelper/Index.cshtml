@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<!-- add textbox using html code -->
+<input type="text" name="fullname" id="fullname" value="" />
+<br />
+<br />
+<!-- add textbox using html helper method -->
+@Html.TextBox("fullname")
+<br />
+<br />
+<!--  set default name  as a value in textbox-->
+@Html.TextBox("fullname", "Shubhangi")
+<br />
+<br />
+<!-- to set HTML attribute -->
+@Html.TextBox("fullname", "Shubhangi",
+    new
+    {
+        style = "background-color:Red; color:White; font-weight: bold; ",
+        title = "Please enter your first name"
+    })
+<br />
+<br />
+
+<!-- Use external stylesheet  for textbox style-->
+<!-- If you want to use attributes that are reserved in Csharp programming language like class, readonly etc.
+    Then you have to use single attheret @@ symbol befor the name of attribute -->
+<!-- we call this class in external style sheet  and the external style sheet is in the content folder within site.css file -->
+
+@Html.TextBox("fullname", "Swati", new { @class = "TextBoxStyle" })  <!-- here we use class as a attribute -->
+<br />
+<br />
+
+<!-- Applying bootstrap class to textbox -->
+@Html.TextBox("fullname", "Pravin", new { @class = "form-control", @readonly = "true" }) <!-- in readonly attribute the user reads only not write anything -->
+<br />
+<br />
+
+
