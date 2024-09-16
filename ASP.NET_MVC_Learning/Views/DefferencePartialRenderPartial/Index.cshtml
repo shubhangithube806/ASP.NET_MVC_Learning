@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+@*
+    Both Html.Partial and Html.RenderPartial can be used to access or display partial view in a view
+
+         Html.Partial                       Html.RenderPartial
+
+     1.Method that returns(convert)    1.Method without any return value,
+      MVCHtmlString                     it means it returns void
+    2.Render Partial  view result can  2.Render Partial  view result can not
+      be stored in string variable        be stored in string variable
+    3.Slow in access                    3.Fast in access
+*@
+<h2>Index</h2>
+
+<h1>Using Html.Partial </h1>
+@{ 
+    var List = Html.Partial("_StudentList");
+    //to add another line in the list
+    List = new MvcHtmlString("<h3>Here is Students List</h3>" + List.ToString());
+}
+
+@List
+
+
+
+
+<h1>Using Html.RenderPartial </h1>
+
+@{
+    Html.RenderPartial("_StudentList");
+}
+
