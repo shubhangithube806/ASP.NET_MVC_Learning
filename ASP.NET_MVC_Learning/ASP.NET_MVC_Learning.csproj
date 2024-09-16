@@ -123,6 +123,7 @@
     <Compile Include="Controllers\ActionLinkController.cs" />
     <Compile Include="Controllers\ActionMethodController.cs" />
     <Compile Include="Controllers\DefferenceViewBagViewDataController.cs" />
+    <Compile Include="Controllers\FormHelperMethodController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\RazorController.cs" />
     <Compile Include="Controllers\SessionController.cs" />
@@ -188,6 +189,7 @@
     <Content Include="Views\ActionLink\AboutUs.cshtml" />
     <Content Include="Views\ActionLink\ContactUs.cshtml" />
     <Content Include="Views\TextBoxHelper\Index.cshtml" />
+    <Content Include="Views\FormHelperMethod\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
