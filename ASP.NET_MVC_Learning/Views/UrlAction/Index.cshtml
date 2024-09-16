@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@Html.ActionLink("Go to About Page", "About", "UrlAction")
+<br />
+<br />
+
+@* Url Action method *@
+
+<a href="@Url.Action("About", "UrlAction")">Go to About Page</a>

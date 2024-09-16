@@ -129,6 +129,7 @@
     <Compile Include="Controllers\SessionController.cs" />
     <Compile Include="Controllers\TempDataController.cs" />
     <Compile Include="Controllers\TextBoxHelperController.cs" />
+    <Compile Include="Controllers\UrlActionController.cs" />
     <Compile Include="Controllers\ViewBagController.cs" />
     <Compile Include="Controllers\ViewDataController.cs" />
     <Compile Include="Global.asax.cs">
@@ -190,6 +191,8 @@
     <Content Include="Views\ActionLink\ContactUs.cshtml" />
     <Content Include="Views\TextBoxHelper\Index.cshtml" />
     <Content Include="Views\FormHelperMethod\Index.cshtml" />
+    <Content Include="Views\UrlAction\Index.cshtml" />
+    <Content Include="Views\UrlAction\About.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
