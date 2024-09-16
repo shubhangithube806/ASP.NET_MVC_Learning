@@ -127,6 +127,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\RazorController.cs" />
     <Compile Include="Controllers\SessionController.cs" />
+    <Compile Include="Controllers\StronglyTypedViewController.cs" />
     <Compile Include="Controllers\TempDataController.cs" />
     <Compile Include="Controllers\TextBoxHelperController.cs" />
     <Compile Include="Controllers\UrlActionController.cs" />
@@ -135,6 +136,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Employe.cs" />
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -193,6 +195,7 @@
     <Content Include="Views\FormHelperMethod\Index.cshtml" />
     <Content Include="Views\UrlAction\Index.cshtml" />
     <Content Include="Views\UrlAction\About.cshtml" />
+    <Content Include="Views\StronglyTypedView\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

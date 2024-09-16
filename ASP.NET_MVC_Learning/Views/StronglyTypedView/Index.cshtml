@@ -1,0 +1,49 @@
+﻿@model List<ASP.NET_MVC_Learning.Models.Employe>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+@*  1.Strongly Typed View is used to pass data from controller to view.
+    2.The view which binds with any model is called as Strongly Typed View.
+    2.Compile time error checking
+*@
+<h2>Index</h2>
+
+@*
+        @{
+            var a = (ASP.NET_MVC_Learning.Models.Employe)ViewData["var1"];     (here we use Typecasting )
+        var b = ViewBag.var2;
+    }
+
+    <h2>ViewData Data</h2>
+    <h3>@a.Id</h3>
+    <h3>@a.Name</h3>
+    <h3>@a.Age</h3>
+
+    <h2>ViewBag Data</h2>
+    <h3>@b.Id</h3>
+    <h3>@b.Name</h3>
+    <h3>@b.Age</h3>
+
+*@
+
+<h2>Strongly Typed View Data</h2>
+@*
+    This is for single  data
+    
+    <h3>@Model.Id</h3>
+    <h3>@Model.Name</h3>
+    <h3>@Model.Age</h3>
+*@
+
+<ul>
+    @{
+        foreach (var i in Model)
+        {
+            <li>@i.Id</li>
+            <li>@i.Name</li>
+            <li>@i.Age</li>
+        }
+    }
+</ul>
