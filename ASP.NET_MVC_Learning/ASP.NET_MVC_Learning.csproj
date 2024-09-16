@@ -125,6 +125,7 @@
     <Compile Include="Controllers\DefferenceViewBagViewDataController.cs" />
     <Compile Include="Controllers\FormHelperMethodController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PartialViewController.cs" />
     <Compile Include="Controllers\RazorController.cs" />
     <Compile Include="Controllers\SessionController.cs" />
     <Compile Include="Controllers\StronglyTypedViewController.cs" />
@@ -196,6 +197,10 @@
     <Content Include="Views\UrlAction\Index.cshtml" />
     <Content Include="Views\UrlAction\About.cshtml" />
     <Content Include="Views\StronglyTypedView\Index.cshtml" />
+    <Content Include="Views\PartialView\Index.cshtml" />
+    <Content Include="Views\Shared\_PartialViewList.cshtml" />
+    <Content Include="Views\PartialView\Contact.cshtml" />
+    <Content Include="Views\Shared\_LoginPartialView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

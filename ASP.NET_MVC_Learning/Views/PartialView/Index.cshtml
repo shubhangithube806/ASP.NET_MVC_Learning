@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@*
+   1.Call partial view IN main View 
+*@
+
+@Html.Partial("_PartialViewList")
+
+<br />
+<br />
+
+@{ 
+    Html.RenderPartial("_PartialViewList");
+}
+
+
+
+
+@Html.Partial("_LoginPartialView")
+<br />
+<br />
+
+@{ 
+    Html.RenderPartial("_LoginPartialView");
+}
