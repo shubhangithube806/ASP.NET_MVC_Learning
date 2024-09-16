@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "Contact";
+}
+
+<h2>Contact</h2>
+
+<h3>This is VieData = @ViewData["data1"]</h3>
+<h3>This is VieBag = @ViewBag.data2</h3>
+<h3>This is TempData = @TempData["data3"]</h3>
+<h3>This is Session = @Session["data4"]</h3>
+
+<ul>
+    @{
+        foreach (string i in (string[])Session["data5"])
+        {
+            <li>@i</li>
+
+        }
+    }
+</ul>

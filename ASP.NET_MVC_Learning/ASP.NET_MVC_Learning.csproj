@@ -121,8 +121,11 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ActionMethodController.cs" />
+    <Compile Include="Controllers\DefferenceViewBagViewDataController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\RazorController.cs" />
+    <Compile Include="Controllers\SessionController.cs" />
+    <Compile Include="Controllers\TempDataController.cs" />
     <Compile Include="Controllers\ViewBagController.cs" />
     <Compile Include="Controllers\ViewDataController.cs" />
     <Compile Include="Global.asax.cs">
@@ -173,6 +176,12 @@
     <Content Include="Views\Razor\Index.cshtml" />
     <Content Include="Views\ViewData\Index.cshtml" />
     <Content Include="Views\ViewBag\Index.cshtml" />
+    <Content Include="Views\DefferenceViewBagViewData\Index.cshtml" />
+    <Content Include="Views\TempData\Index.cshtml" />
+    <Content Include="Views\TempData\About.cshtml" />
+    <Content Include="Views\Session\Index.cshtml" />
+    <Content Include="Views\Session\About.cshtml" />
+    <Content Include="Views\Session\Contact.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
