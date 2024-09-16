@@ -1,0 +1,15 @@
+﻿@model List<ASP.NET_MVC_Learning.Models.Product>
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<h1 class="text-center">PRODUCTS</h1>
+
+@{ 
+    foreach (var item in Model)
+    {
+        Html.RenderPartial("_ProductsPartialView", item);
+    }
+}
+
