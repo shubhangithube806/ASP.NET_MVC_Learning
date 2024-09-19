@@ -1,0 +1,16 @@
+﻿@model ASP.NET_MVC_Learning.Models.Calculation
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@using (Html.BeginForm()) 
+{ 
+    <p>@Html.LabelFor(model => model.num1) &nbsp; @Html.TextBoxFor(model => model.num1 , new { @class = "form-control" })</p>
+    <p>@Html.LabelFor(model => model.num2) &nbsp; @Html.TextBoxFor(model => model.num2 , new { @class = "form-control" })</p>
+
+    <input type="submit" value="Submit" />
+
+    <p>Addition result is: @ViewBag.result</p>
+}
