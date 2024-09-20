@@ -122,6 +122,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ActionLinkController.cs" />
     <Compile Include="Controllers\ActionMethodController.cs" />
+    <Compile Include="Controllers\DataAnnotationController.cs" />
     <Compile Include="Controllers\DefferencePartialRenderPartialController.cs" />
     <Compile Include="Controllers\DefferenceViewBagViewDataController.cs" />
     <Compile Include="Controllers\FormHelperMethodController.cs" />
@@ -145,6 +146,7 @@
     <Compile Include="Models\Calculation.cs" />
     <Compile Include="Models\Employe.cs" />
     <Compile Include="Models\Employee.cs" />
+    <Compile Include="Models\Farmer.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\SignUp.cs" />
     <Compile Include="Models\Student.cs" />
@@ -219,9 +221,11 @@
     <Content Include="Views\StronglyTypedHTMLHelpers\Index.cshtml" />
     <Content Include="Views\StronglyTypedHtmlHelpers2\Index.cshtml" />
     <Content Include="Views\ValidationMessageSummary\Index.cshtml" />
+    <Content Include="Views\DataAnnotation\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Farmer\" />
     <Folder Include="Views\House\" />
   </ItemGroup>
   <ItemGroup>

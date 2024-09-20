@@ -1,0 +1,68 @@
+﻿@model ASP.NET_MVC_Learning.Models.Farmer
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@using (Html.BeginForm()) //lamda expression model => model.FrmerId
+{           // model property name display as a LabelFor
+    <p>
+        @Html.LabelFor(model => model.FarmerId)&nbsp; @Html.TextBoxFor(model => model.FarmerId, "", new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.FarmerId, "", new { @class = "text-danger" })  @*"" this means you don't want to give default value*@
+    </p>
+
+    <p>
+        @Html.LabelFor(model => model.FarmerName)&nbsp; @Html.TextBoxFor(model => model.FarmerName, "", new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.FarmerName, "", new { @class = "text-danger" })
+    </p>
+
+    <p>
+        @Html.LabelFor(model => model.FarmerAge)&nbsp; @Html.TextBoxFor(model => model.FarmerAge, "", new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.FarmerAge, "", new { @class = "text-danger" })
+    </p>
+
+    <p>
+        @Html.LabelFor(model => model.FarmerGender)&nbsp; @Html.TextBoxFor(model => model.FarmerGender, "", new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.FarmerGender, "", new { @class = "text-danger" })
+    </p>
+
+    <p>
+        @Html.LabelFor(model => model.FarmerEmail)&nbsp; @Html.TextBoxFor(model => model.FarmerEmail, "", new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.FarmerEmail, "", new { @class = "text-danger" })
+    </p>
+
+    <p>
+        @Html.LabelFor(model => model.FarmerPassword)&nbsp; @Html.EditorFor(model => model.FarmerPassword, new { htmlAttributes = new { @class = "form-control" } })   @*editor for is not taken bootstrap classes so i use htmlAttribute*@
+        @Html.ValidationMessageFor(model => model.FarmerPassword, "", new { @class = "text-danger" })
+    </p>
+
+    <p>
+        @Html.LabelFor(model => model.FarmerConfirmPassword)&nbsp; @Html.PasswordFor(model => model.FarmerConfirmPassword, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.FarmerConfirmPassword, "", new { @class = "text-danger" })
+    </p>
+
+    <p>
+        @Html.LabelFor(model => model.OrganizationName)&nbsp; @Html.PasswordFor(model => model.OrganizationName, new { @class = "form-control", @value = "ABC Organization", @readonly = true }) @* @ is because value is the atribute of textbox *@
+    </p>
+
+    <p>
+        @Html.LabelFor(model => model.FarmerAddress)&nbsp; @Html.EditorFor(model => model.FarmerAddress, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(model => model.FarmerAddress, "", new { @class = "text-danger" })
+    </p>
+
+    <p>
+        @Html.LabelFor(model => model.FarmerStartDate)&nbsp; @Html.EditorFor(model => model.FarmerStartDate, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(model => model.FarmerStartDate, "", new { @class = "text-danger" })
+    </p>
+
+
+    <p>
+        @Html.LabelFor(model => model.FarmerStartTime)&nbsp; @Html.EditorFor(model => model.FarmerStartTime, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(model => model.FarmerStartTime, "", new { @class = "text-danger" })
+    </p>
+
+
+    <input type="submit" value="Submit" class="btn btn-info" />
+    @Html.Raw(ViewData["SuccessMessage"])
+}
