@@ -129,6 +129,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PartialViewController.cs" />
     <Compile Include="Controllers\RazorController.cs" />
+    <Compile Include="Controllers\ScaffoldColumnDataAnnotationController.cs" />
     <Compile Include="Controllers\SessionController.cs" />
     <Compile Include="Controllers\StronglyTypedHtmlHelpers2Controller.cs" />
     <Compile Include="Controllers\StronglyTypedHTMLHelpersController.cs" />
@@ -147,6 +148,7 @@
     <Compile Include="Models\Employe.cs" />
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\Farmer.cs" />
+    <Compile Include="Models\Person.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\SignUp.cs" />
     <Compile Include="Models\Student.cs" />
@@ -222,6 +224,7 @@
     <Content Include="Views\StronglyTypedHtmlHelpers2\Index.cshtml" />
     <Content Include="Views\ValidationMessageSummary\Index.cshtml" />
     <Content Include="Views\DataAnnotation\Index.cshtml" />
+    <Content Include="Views\ScaffoldColumnDataAnnotation\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

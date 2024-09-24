@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASP.NET_MVC_Learning", "ASP
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCodeFirstApproach", "EFCodeFirstApproach\EFCodeFirstApproach.csproj", "{B6578F57-0A65-44D2-8A76-E5625FCB1EBB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFDatabaseFirstApproach", "EFDatabaseFirstApproach\EFDatabaseFirstApproach.csproj", "{B96D0A77-FC15-46FD-9651-7ED6BB1447DF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{B6578F57-0A65-44D2-8A76-E5625FCB1EBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B6578F57-0A65-44D2-8A76-E5625FCB1EBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B6578F57-0A65-44D2-8A76-E5625FCB1EBB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B96D0A77-FC15-46FD-9651-7ED6BB1447DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B96D0A77-FC15-46FD-9651-7ED6BB1447DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B96D0A77-FC15-46FD-9651-7ED6BB1447DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B96D0A77-FC15-46FD-9651-7ED6BB1447DF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
