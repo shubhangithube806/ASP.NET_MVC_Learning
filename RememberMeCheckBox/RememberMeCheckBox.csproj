@@ -8,17 +8,17 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{6624ED21-319B-436B-A16C-9A6A89B265D2}</ProjectGuid>
+    <ProjectGuid>{B3487FDB-DF30-497E-9936-F66D71487CBD}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ASP.NET_MVC_Learning</RootNamespace>
-    <AssemblyName>ASP.NET_MVC_Learning</AssemblyName>
+    <RootNamespace>RememberMeCheckBox</RootNamespace>
+    <AssemblyName>RememberMeCheckBox</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
-    <IISExpressSSLPort>44391</IISExpressSSLPort>
+    <IISExpressSSLPort>44328</IISExpressSSLPort>
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
@@ -45,10 +45,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -120,41 +128,37 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\ActionLinkController.cs" />
-    <Compile Include="Controllers\ActionMethodController.cs" />
-    <Compile Include="Controllers\DataAnnotationController.cs" />
-    <Compile Include="Controllers\DefferencePartialRenderPartialController.cs" />
-    <Compile Include="Controllers\DefferenceViewBagViewDataController.cs" />
-    <Compile Include="Controllers\FormHelperMethodController.cs" />
+    <Compile Include="Controllers\DashboardController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\PartialViewController.cs" />
-    <Compile Include="Controllers\RazorController.cs" />
-    <Compile Include="Controllers\ScaffoldColumnDataAnnotationController.cs" />
-    <Compile Include="Controllers\SessionController.cs" />
-    <Compile Include="Controllers\StronglyTypedHtmlHelpers2Controller.cs" />
-    <Compile Include="Controllers\StronglyTypedHTMLHelpersController.cs" />
-    <Compile Include="Controllers\StronglyTypedPartialViewController.cs" />
-    <Compile Include="Controllers\StronglyTypedViewController.cs" />
-    <Compile Include="Controllers\TempDataController.cs" />
-    <Compile Include="Controllers\TextBoxHelperController.cs" />
-    <Compile Include="Controllers\UrlActionController.cs" />
-    <Compile Include="Controllers\ValidationMessageSummaryController.cs" />
-    <Compile Include="Controllers\ViewBagController.cs" />
-    <Compile Include="Controllers\ViewDataController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Calculation.cs" />
-    <Compile Include="Models\Employe.cs" />
-    <Compile Include="Models\Employee.cs" />
-    <Compile Include="Models\Farmer.cs" />
-    <Compile Include="Models\Person.cs" />
-    <Compile Include="Models\Product.cs" />
-    <Compile Include="Models\SignUp.cs" />
-    <Compile Include="Models\Student.cs" />
+    <Compile Include="Models\LoginDbModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LoginDbModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LoginDbModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LoginDbModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LoginDbModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LoginDbModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\User.cs">
+      <DependentUpon>LoginDbModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\LoginDB.mdf" />
+    <Content Include="App_Data\LoginDB_log.ldf">
+      <DependentUpon>LoginDB.mdf</DependentUpon>
+    </Content>
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -163,11 +167,25 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Images\gogle.jpg" />
-    <Content Include="Images\shoes.jpg" />
-    <Content Include="Images\watch.jpg" />
+    <Content Include="Models\LoginDbModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>LoginDbModel.edmx</DependentUpon>
+      <LastGenOutput>LoginDbModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\LoginDbModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>LoginDbModel.edmx</DependentUpon>
+      <LastGenOutput>LoginDbModel.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <EntityDeploy Include="Models\LoginDbModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>LoginDbModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\LoginDbModel.edmx.diagram">
+      <DependentUpon>LoginDbModel.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -193,45 +211,10 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\ActionMethod\Index.cshtml" />
-    <Content Include="Views\ActionMethod\AboutUs.cshtml" />
-    <Content Include="Views\Razor\Index.cshtml" />
-    <Content Include="Views\ViewData\Index.cshtml" />
-    <Content Include="Views\ViewBag\Index.cshtml" />
-    <Content Include="Views\DefferenceViewBagViewData\Index.cshtml" />
-    <Content Include="Views\TempData\Index.cshtml" />
-    <Content Include="Views\TempData\About.cshtml" />
-    <Content Include="Views\Session\Index.cshtml" />
-    <Content Include="Views\Session\About.cshtml" />
-    <Content Include="Views\Session\Contact.cshtml" />
-    <Content Include="Views\ActionLink\Index.cshtml" />
-    <Content Include="Views\ActionLink\AboutUs.cshtml" />
-    <Content Include="Views\ActionLink\ContactUs.cshtml" />
-    <Content Include="Views\TextBoxHelper\Index.cshtml" />
-    <Content Include="Views\FormHelperMethod\Index.cshtml" />
-    <Content Include="Views\UrlAction\Index.cshtml" />
-    <Content Include="Views\UrlAction\About.cshtml" />
-    <Content Include="Views\StronglyTypedView\Index.cshtml" />
-    <Content Include="Views\PartialView\Index.cshtml" />
-    <Content Include="Views\Shared\_PartialViewList.cshtml" />
-    <Content Include="Views\PartialView\Contact.cshtml" />
-    <Content Include="Views\Shared\_LoginPartialView.cshtml" />
-    <Content Include="Views\DefferencePartialRenderPartial\Index.cshtml" />
-    <Content Include="Views\Shared\_StudentList.cshtml" />
-    <Content Include="Views\StronglyTypedPartialView\Index.cshtml" />
-    <Content Include="Views\Shared\_ProductsPartialView.cshtml" />
-    <Content Include="Views\StronglyTypedHTMLHelpers\Index.cshtml" />
-    <Content Include="Views\StronglyTypedHtmlHelpers2\Index.cshtml" />
-    <Content Include="Views\ValidationMessageSummary\Index.cshtml" />
-    <Content Include="Views\DataAnnotation\Index.cshtml" />
-    <Content Include="Views\ScaffoldColumnDataAnnotation\Index.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\Dashboard\Index.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-    <Folder Include="Views\Farmer\" />
-    <Folder Include="Views\House\" />
-    <Folder Include="Views\RememberMe\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -244,6 +227,9 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -261,9 +247,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>60587</DevelopmentServerPort>
+          <DevelopmentServerPort>57834</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>https://localhost:44391/</IISUrl>
+          <IISUrl>https://localhost:44328/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
