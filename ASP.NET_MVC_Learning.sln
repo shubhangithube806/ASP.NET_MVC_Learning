@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutomaticallyCreatedCrudDBF
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchFunctionalityWithCrudOperations", "SearchFunctionalityWithCrudOperations\SearchFunctionalityWithCrudOperations.csproj", "{EBDDC101-95D1-4F03-A30F-5E97E153A7BA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UploadingAndRetrievingImages", "UploadingAndRetrievingImages\UploadingAndRetrievingImages.csproj", "{D7423FC1-0FE6-41FC-B0AE-D060877566D5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{EBDDC101-95D1-4F03-A30F-5E97E153A7BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EBDDC101-95D1-4F03-A30F-5E97E153A7BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EBDDC101-95D1-4F03-A30F-5E97E153A7BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7423FC1-0FE6-41FC-B0AE-D060877566D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7423FC1-0FE6-41FC-B0AE-D060877566D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7423FC1-0FE6-41FC-B0AE-D060877566D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7423FC1-0FE6-41FC-B0AE-D060877566D5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
