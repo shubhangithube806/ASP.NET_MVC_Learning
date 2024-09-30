@@ -52,6 +52,7 @@ namespace UploadingAndRetrievingImages.Controllers
                     {
                         ViewBag.Message = "<script>alert('Record Inserted !!')</script>";
                         ModelState.Clear();
+                        return RedirectToAction("Index", "House");
                     }
                     else
                     {
@@ -60,12 +61,12 @@ namespace UploadingAndRetrievingImages.Controllers
                 }
                 else
                 {
-                    ViewBag.SizeMessage = "<script>alert('Size Should be of 1 MB !!')<script/> ";
+                    ViewBag.SizeMessage = "<script>alert('Size Should be of 1 MB !!')</script> ";
                 }
             }
             else
             {
-                ViewBag.ExtensionMessage = "<script>alert('Image Not Supported !!')<script/> ";
+                ViewBag.ExtensionMessage = "<script>alert('Image Not Supported !!')</script> ";
             }
             
             return View();

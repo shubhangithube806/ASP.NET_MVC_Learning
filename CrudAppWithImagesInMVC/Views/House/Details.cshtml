@@ -1,0 +1,53 @@
+﻿@model CrudAppWithImagesInMVC.Models.Employe
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Employe</h4>
+    <hr />
+    <dl class="dl-horizontal">
+      @* dl - defination list, dt- defination title, dd- defination description *@
+        <dt>
+            @Html.DisplayNameFor(model => model.Id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Designation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Designation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ImagePath)
+        </dt>
+
+        <dd>
+            <img src="@Url.Content( Session["Image2"].ToString())" height="80" width="80" />
+
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+
+    @Html.ActionLink("Back to List", "Index")
+</p>
