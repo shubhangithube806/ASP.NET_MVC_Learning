@@ -27,6 +27,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrudAppWithImagesInMVC", "C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UpdateEDMInMVC", "UpdateEDMInMVC\UpdateEDMInMVC.csproj", "{796FE187-730E-48E5-BE89-63EF0A375EA5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JqueryDataTableMVC", "JqueryDataTableMVC\JqueryDataTableMVC.csproj", "{3F1949FC-EA1B-4949-B3CE-858CBF2FE102}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignUpWithLoginMVC", "SignUpWithLoginMVC\SignUpWithLoginMVC.csproj", "{BAB72361-B89A-4822-AB8A-029D46F7BDAF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +85,14 @@ Global
 		{796FE187-730E-48E5-BE89-63EF0A375EA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{796FE187-730E-48E5-BE89-63EF0A375EA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{796FE187-730E-48E5-BE89-63EF0A375EA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F1949FC-EA1B-4949-B3CE-858CBF2FE102}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F1949FC-EA1B-4949-B3CE-858CBF2FE102}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F1949FC-EA1B-4949-B3CE-858CBF2FE102}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F1949FC-EA1B-4949-B3CE-858CBF2FE102}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BAB72361-B89A-4822-AB8A-029D46F7BDAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAB72361-B89A-4822-AB8A-029D46F7BDAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAB72361-B89A-4822-AB8A-029D46F7BDAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAB72361-B89A-4822-AB8A-029D46F7BDAF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
