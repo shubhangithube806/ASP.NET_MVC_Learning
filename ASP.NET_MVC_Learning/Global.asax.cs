@@ -16,6 +16,7 @@ namespace ASP.NET_MVC_Learning
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+           // GlobalFilters.Filters.Add(new HandleErrorAttribute());  /*this LINE WRITTEN BY SHUBHANGI TO MAKE GLOBAL (FOR WHOLE APPLICTION OR MULTIPLE CONTROLLER) ERROR HANDLIE */
         }
     }
 }

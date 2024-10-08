@@ -125,6 +125,7 @@
     <Compile Include="Controllers\DataAnnotationController.cs" />
     <Compile Include="Controllers\DefferencePartialRenderPartialController.cs" />
     <Compile Include="Controllers\DefferenceViewBagViewDataController.cs" />
+    <Compile Include="Controllers\ExceptionFilterController.cs" />
     <Compile Include="Controllers\FormHelperMethodController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PartialViewController.cs" />
@@ -225,6 +226,9 @@
     <Content Include="Views\ValidationMessageSummary\Index.cshtml" />
     <Content Include="Views\DataAnnotation\Index.cshtml" />
     <Content Include="Views\ScaffoldColumnDataAnnotation\Index.cshtml" />
+    <Content Include="Views\ExceptionFilter\Index.cshtml" />
+    <Content Include="Views\ExceptionFilter\ErrorPage.cshtml" />
+    <Content Include="Views\ExceptionFilter\About.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
