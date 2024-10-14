@@ -37,6 +37,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OutputCacheFilter", "Output
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AjaxBeginFormMVC", "AjaxBeginFormMVC\AjaxBeginFormMVC.csproj", "{1EF53D80-4BC4-4C7F-8631-CDF19636B254}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AjaxBeginForm2", "AjaxBeginForm2\AjaxBeginForm2.csproj", "{7A5BD444-C247-477E-9A17-18FD2A56B94A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -111,6 +113,10 @@ Global
 		{1EF53D80-4BC4-4C7F-8631-CDF19636B254}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1EF53D80-4BC4-4C7F-8631-CDF19636B254}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1EF53D80-4BC4-4C7F-8631-CDF19636B254}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A5BD444-C247-477E-9A17-18FD2A56B94A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A5BD444-C247-477E-9A17-18FD2A56B94A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A5BD444-C247-477E-9A17-18FD2A56B94A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A5BD444-C247-477E-9A17-18FD2A56B94A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
