@@ -1,0 +1,58 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<div id="Loader" style="display: none;">
+    <img src="~/Images/circle-9360_128.gif" width="100" height="100" />
+</div>
+
+
+@Ajax.ActionLink("All Employees", "AllEmployees", "House",
+    new AjaxOptions()
+    {
+        HttpMethod = "GET",
+        InsertionMode = InsertionMode.Replace,
+        UpdateTargetId = "DivUpdate",           //this action method retuns any thing which is stored in this 'DivUpdate'
+        LoadingElementId = "Loader",
+    }
+
+    )
+
+
+<span style="color:red;"> -- </span>  @*display any thing in one line use span tag*@
+
+@Ajax.ActionLink("Top 3 Employee Salaries", "Top3Emp", "House",
+    new AjaxOptions()
+    {
+        HttpMethod = "GET",
+        InsertionMode = InsertionMode.Replace,
+        UpdateTargetId = "DivUpdate",           //this action method retuns any thing which is stored in this 'DivUpdate'
+        LoadingElementId = "Loader",
+    }
+
+    )
+
+
+<span style="color:red;"> -- </span>
+
+@Ajax.ActionLink("Bottom 3 Employee Salaries", "Bottom3Emp", "House",
+    new AjaxOptions()
+    {
+        HttpMethod = "GET",
+        InsertionMode = InsertionMode.Replace,
+        UpdateTargetId = "DivUpdate",           //this action method retuns any thing which is stored in this 'DivUpdate'
+        LoadingElementId = "Loader",
+    }
+
+    )
+
+
+
+<div id="DivUpdate">
+
+</div>
+
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
