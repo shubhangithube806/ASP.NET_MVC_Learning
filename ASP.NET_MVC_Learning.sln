@@ -41,6 +41,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AjaxBeginForm2", "AjaxBegin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AjaxActionLink", "AjaxActionLink\AjaxActionLink.csproj", "{F3C95B8F-EE2F-4229-887F-7AB11EB3DBAB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AjaxMVCLoadMoreData", "AjaxMVCLoadMoreData\AjaxMVCLoadMoreData.csproj", "{1ED0E91E-A51A-43BA-AF8B-A3054B9F9505}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -123,6 +125,10 @@ Global
 		{F3C95B8F-EE2F-4229-887F-7AB11EB3DBAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F3C95B8F-EE2F-4229-887F-7AB11EB3DBAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F3C95B8F-EE2F-4229-887F-7AB11EB3DBAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1ED0E91E-A51A-43BA-AF8B-A3054B9F9505}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1ED0E91E-A51A-43BA-AF8B-A3054B9F9505}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1ED0E91E-A51A-43BA-AF8B-A3054B9F9505}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1ED0E91E-A51A-43BA-AF8B-A3054B9F9505}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

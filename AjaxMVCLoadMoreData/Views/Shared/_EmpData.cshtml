@@ -1,0 +1,79 @@
+﻿@model IEnumerable<AjaxMVCLoadMoreData.Models.employe>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Id)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Designation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Salary)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Age)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Designation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Salary)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Age)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }
+
+    @{ if (Convert.ToInt32(Session["data"]) > Model.Count())
+        {
+            //to hide button
+        }
+        else
+        {
+            <tr>
+                <td colspan="6" align="center">
+                    <div id="Loader" style="display:none;">
+                        <img src="~/Images/circle-9360_128.gif" height="100" width="100" />
+                    </div>
+
+                    @Ajax.ActionLink("Load More Data", "Index", "Home",
+                   new AjaxOptions()
+                   {
+                        HttpMethod = "POST",
+                        InsertionMode = InsertionMode.Replace,  //first data cut and new or next data shown
+                        UpdateTargetId = "DivUpdate",
+                        LoadingElementId = "Loader",//when request comes to server and give response to user within this time one loading image is shown
+
+                   },
+                   new { @class = "btn btn-info" }
+                   )
+                </td>
+            </tr>
+        }
+    }
+
+</table>
+
+
