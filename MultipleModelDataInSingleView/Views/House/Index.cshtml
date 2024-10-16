@@ -1,0 +1,67 @@
+﻿@using MultipleModelDataInSingleView.Models
+@model MultiModelData
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@{ 
+    Html.RenderAction("Students");   //RenderAction is used to call actionmethod
+    Html.RenderAction("Teachers");
+}
+
+@*<h1>STUDENTS DATA</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Class</th>
+            <th>Fees</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in (List<Student>)Session["student"]) //@foreach (var item in Model.MyStudents)  //@foreach (var item in (List<Student>)TempData["student"])
+                                                                 //viewdata needs type casting so (List<Student>)ViewData["student"]  
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Name</td>
+                <td>@item.Gender</td>
+                <td>@(item.@Class)</td>
+                <td>@item.Fees</td>
+            </tr>
+        }
+
+    </tbody>
+</table>*@
+
+@*<h1>TEACHERS DATA</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Qualification</th>
+            <th>Salary</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in (List<Teacher>)Session["teacher"]) // @foreach (var item in (List<Teacher>)ViewData["teacher"]) // @foreach (var item in ViewBag.teacher) , //@foreach (var item in Model.MyTeachers)
+
+        {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Name</td> 
+                    <td>@item.Gender</td>
+                    <td>@item.Qualification</td>
+                    <td>@item.Salary</td>
+                </tr>
+            }
+
+    </tbody>
+</table>*@

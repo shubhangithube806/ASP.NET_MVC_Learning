@@ -43,6 +43,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AjaxMVCLoadMoreData", "Ajax
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JqueryDataTable", "JqueryDataTable\JqueryDataTable.csproj", "{2D52F8C5-DCE4-4C43-9039-E3983845E5CE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultipleModelDataInSingleView", "MultipleModelDataInSingleView\MultipleModelDataInSingleView.csproj", "{5C6E0C29-8099-46C2-898A-DFB9E78D3B70}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -129,6 +131,10 @@ Global
 		{2D52F8C5-DCE4-4C43-9039-E3983845E5CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2D52F8C5-DCE4-4C43-9039-E3983845E5CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2D52F8C5-DCE4-4C43-9039-E3983845E5CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C6E0C29-8099-46C2-898A-DFB9E78D3B70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C6E0C29-8099-46C2-898A-DFB9E78D3B70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C6E0C29-8099-46C2-898A-DFB9E78D3B70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C6E0C29-8099-46C2-898A-DFB9E78D3B70}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
